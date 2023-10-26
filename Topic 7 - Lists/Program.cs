@@ -427,7 +427,7 @@ namespace Topic_7___Lists
                
                 if (choice == "4")
                 {
-                    bool match = true;
+                    bool match = false;
 
                     Console.WriteLine("Please give me a vegetable to add.");
                     string add = Console.ReadLine().ToUpper().Trim();
@@ -438,28 +438,26 @@ namespace Topic_7___Lists
 
                         if (add == vegetable) 
                         {
-                            match = false;
-                        }
-
-                        if (add != vegetable) 
-                        {
                             match = true;
+                            
                         }
-                    
+                       
+                        
+
                     }
-                    
-                    if (match = true) 
+                    if (match == false)
                     {
                         vegetables.Add(add);
                         Console.WriteLine("K");
 
                     }
-                    if (match = false)
+                    else if (match == true)
                     {
                         Console.WriteLine("I'm sorry, but that is already in the list.");
                         Console.ReadLine();
 
                     }
+
 
 
                     if (add == "FISH") 
